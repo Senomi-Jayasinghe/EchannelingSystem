@@ -1,0 +1,526 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1952B0E-4AB2-476E-B4C6-ECC9C574F849}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EchannelingSystem</RootNamespace>
+    <AssemblyName>EchannelingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Images\admin.jpg" />
+    <Content Include="Images\Availability.jpg" />
+    <Content Include="Images\Calendar.jpg" />
+    <Content Include="Images\consultantsearch.jpg" />
+    <Content Include="Images\diseasedb.png" />
+    <Content Include="Images\healthcare.jpg" />
+    <Content Include="Images\patient.jpg" />
+    <Content Include="Images\prescriptions.jpg" />
+    <Content Include="Images\report.jpg" />
+    <Content Include="Images\Reports.jpg" />
+    <Content Include="Images\Searchdoc.jpg" />
+    <Content Include="Images\UserProfile.jpg" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap_452.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <Content Include="View\AdminHomeUI.aspx" />
+    <Content Include="View\AdminUI.aspx" />
+    <Content Include="View\AppointmentUI.aspx" />
+    <Content Include="View\BranchUI.aspx" />
+    <Content Include="View\CalendarUI.aspx" />
+    <Content Include="View\ConsultantCalendars.aspx" />
+    <Content Include="View\ConsultantHomeUI.aspx" />
+    <Content Include="View\ConsultantReportsUI.aspx" />
+    <Content Include="View\ConsultantSearchUI.aspx" />
+    <Content Include="View\ConsultantUI.aspx" />
+    <Content Include="View\ConsultationUI.aspx" />
+    <Content Include="View\DieaseUI.aspx" />
+    <Content Include="View\DiseaseKnowledgeUI.aspx" />
+    <Content Include="View\HomeUI.aspx" />
+    <Content Include="View\LabReportsUI.aspx" />
+    <Content Include="View\LoginUI.aspx" />
+    <Content Include="View\LogOut.aspx" />
+    <Content Include="View\MedicineCategoryUI.aspx" />
+    <Content Include="View\MedicineUI.aspx" />
+    <Content Include="View\AppCalendarSearchUI.aspx" />
+    <Content Include="View\PatientReportsUI.aspx" />
+    <Content Include="View\PatientSearchUI.aspx" />
+    <Content Include="View\PatientUI.aspx" />
+    <Content Include="View\PaymentCategoryUI.aspx" />
+    <Content Include="View\PaymentSuccessUI.aspx" />
+    <Content Include="View\PaymentTypeUI.aspx" />
+    <Content Include="View\PaymentUI.aspx" />
+    <Content Include="View\PrescriptionsUI.aspx" />
+    <Content Include="View\QualificationUI.aspx" />
+    <Content Include="View\SignUpUI.aspx" />
+    <Content Include="View\SpecializationUI.aspx" />
+    <Content Include="View\SymptomUI.aspx" />
+    <Content Include="View\ForgetPassword.aspx" />
+    <Content Include="View\TestUI.aspx" />
+    <Content Include="View\UpdatePassword.aspx" />
+    <Content Include="View\UpdateProfile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AdminController.cs" />
+    <Compile Include="Controller\AppCalendarController.cs" />
+    <Compile Include="Controller\AppointmentController.cs" />
+    <Compile Include="Controller\BranchController.cs" />
+    <Compile Include="Controller\ConsultantController.cs" />
+    <Compile Include="Controller\DiseaseController.cs" />
+    <Compile Include="Controller\DistrictController.cs" />
+    <Compile Include="Controller\LabReportsController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\MedicineCategoryController.cs" />
+    <Compile Include="Controller\MedicineController.cs" />
+    <Compile Include="Controller\PatientController.cs" />
+    <Compile Include="Controller\PaymentCategoryController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
+    <Compile Include="Controller\PaymentTypeController.cs" />
+    <Compile Include="Controller\QualificationController.cs" />
+    <Compile Include="Controller\SpecializationController.cs" />
+    <Compile Include="Controller\SymptomController.cs" />
+    <Compile Include="Controller\TitleController.cs" />
+    <Compile Include="Database\SQLConfig.cs" />
+    <Compile Include="Echanneling.Master.cs">
+      <DependentUpon>Echanneling.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Echanneling.Master.designer.cs">
+      <DependentUpon>Echanneling.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\AppCalendar.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\Branch.cs" />
+    <Compile Include="Model\Consultant.cs" />
+    <Compile Include="Model\ConsultantQualification.cs" />
+    <Compile Include="Model\ConsultantSpecialization.cs" />
+    <Compile Include="Model\Consultation.cs" />
+    <Compile Include="Model\ConsultationDiseases.cs" />
+    <Compile Include="Model\ConsultationPrescription.cs" />
+    <Compile Include="Model\ConsultationReports.cs" />
+    <Compile Include="Model\ConsultationSymptoms.cs" />
+    <Compile Include="Model\Disease.cs" />
+    <Compile Include="Model\DiseaseSymptom.cs" />
+    <Compile Include="Model\District.cs" />
+    <Compile Include="Model\LabReports.cs" />
+    <Compile Include="Model\Medicine.cs" />
+    <Compile Include="Model\MedicineCategory.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\PaymentCategory.cs" />
+    <Compile Include="Model\PaymentDetails.cs" />
+    <Compile Include="Model\PaymentType.cs" />
+    <Compile Include="Model\Qualification.cs" />
+    <Compile Include="Model\Specialization.cs" />
+    <Compile Include="Model\Symptom.cs" />
+    <Compile Include="Model\Title.cs" />
+    <Compile Include="Model\UserLogin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AdminHomeUI.aspx.cs">
+      <DependentUpon>AdminHomeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AdminHomeUI.aspx.designer.cs">
+      <DependentUpon>AdminHomeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminUI.aspx.cs">
+      <DependentUpon>AdminUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AdminUI.aspx.designer.cs">
+      <DependentUpon>AdminUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AppointmentUI.aspx.cs">
+      <DependentUpon>AppointmentUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AppointmentUI.aspx.designer.cs">
+      <DependentUpon>AppointmentUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\BranchUI.aspx.cs">
+      <DependentUpon>BranchUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\BranchUI.aspx.designer.cs">
+      <DependentUpon>BranchUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalendarUI.aspx.cs">
+      <DependentUpon>CalendarUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\CalendarUI.aspx.designer.cs">
+      <DependentUpon>CalendarUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultantCalendars.aspx.cs">
+      <DependentUpon>ConsultantCalendars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultantCalendars.aspx.designer.cs">
+      <DependentUpon>ConsultantCalendars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultantHomeUI.aspx.cs">
+      <DependentUpon>ConsultantHomeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultantHomeUI.aspx.designer.cs">
+      <DependentUpon>ConsultantHomeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultantReportsUI.aspx.cs">
+      <DependentUpon>ConsultantReportsUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultantReportsUI.aspx.designer.cs">
+      <DependentUpon>ConsultantReportsUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultantSearchUI.aspx.cs">
+      <DependentUpon>ConsultantSearchUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultantSearchUI.aspx.designer.cs">
+      <DependentUpon>ConsultantSearchUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultantUI.aspx.cs">
+      <DependentUpon>ConsultantUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultantUI.aspx.designer.cs">
+      <DependentUpon>ConsultantUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultationUI.aspx.cs">
+      <DependentUpon>ConsultationUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultationUI.aspx.designer.cs">
+      <DependentUpon>ConsultationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\DieaseUI.aspx.cs">
+      <DependentUpon>DieaseUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\DieaseUI.aspx.designer.cs">
+      <DependentUpon>DieaseUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\DiseaseKnowledgeUI.aspx.cs">
+      <DependentUpon>DiseaseKnowledgeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\DiseaseKnowledgeUI.aspx.designer.cs">
+      <DependentUpon>DiseaseKnowledgeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeUI.aspx.cs">
+      <DependentUpon>HomeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\HomeUI.aspx.designer.cs">
+      <DependentUpon>HomeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\LabReportsUI.aspx.cs">
+      <DependentUpon>LabReportsUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\LabReportsUI.aspx.designer.cs">
+      <DependentUpon>LabReportsUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginUI.aspx.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\LoginUI.aspx.designer.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicineCategoryUI.aspx.cs">
+      <DependentUpon>MedicineCategoryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MedicineCategoryUI.aspx.designer.cs">
+      <DependentUpon>MedicineCategoryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MedicineUI.aspx.cs">
+      <DependentUpon>MedicineUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MedicineUI.aspx.designer.cs">
+      <DependentUpon>MedicineUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AppCalendarSearchUI.aspx.cs">
+      <DependentUpon>AppCalendarSearchUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AppCalendarSearchUI.aspx.designer.cs">
+      <DependentUpon>AppCalendarSearchUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientReportsUI.aspx.cs">
+      <DependentUpon>PatientReportsUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PatientReportsUI.aspx.designer.cs">
+      <DependentUpon>PatientReportsUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientSearchUI.aspx.cs">
+      <DependentUpon>PatientSearchUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PatientSearchUI.aspx.designer.cs">
+      <DependentUpon>PatientSearchUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientUI.aspx.cs">
+      <DependentUpon>PatientUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PatientUI.aspx.designer.cs">
+      <DependentUpon>PatientUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentCategoryUI.aspx.cs">
+      <DependentUpon>PaymentCategoryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PaymentCategoryUI.aspx.designer.cs">
+      <DependentUpon>PaymentCategoryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentSuccessUI.aspx.cs">
+      <DependentUpon>PaymentSuccessUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PaymentSuccessUI.aspx.designer.cs">
+      <DependentUpon>PaymentSuccessUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentTypeUI.aspx.cs">
+      <DependentUpon>PaymentTypeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PaymentTypeUI.aspx.designer.cs">
+      <DependentUpon>PaymentTypeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentUI.aspx.cs">
+      <DependentUpon>PaymentUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PaymentUI.aspx.designer.cs">
+      <DependentUpon>PaymentUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrescriptionsUI.aspx.cs">
+      <DependentUpon>PrescriptionsUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PrescriptionsUI.aspx.designer.cs">
+      <DependentUpon>PrescriptionsUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\QualificationUI.aspx.cs">
+      <DependentUpon>QualificationUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\QualificationUI.aspx.designer.cs">
+      <DependentUpon>QualificationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUpUI.aspx.cs">
+      <DependentUpon>SignUpUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SignUpUI.aspx.designer.cs">
+      <DependentUpon>SignUpUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpecializationUI.aspx.cs">
+      <DependentUpon>SpecializationUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SpecializationUI.aspx.designer.cs">
+      <DependentUpon>SpecializationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SymptomUI.aspx.cs">
+      <DependentUpon>SymptomUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SymptomUI.aspx.designer.cs">
+      <DependentUpon>SymptomUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestUI.aspx.cs">
+      <DependentUpon>TestUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\TestUI.aspx.designer.cs">
+      <DependentUpon>TestUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdatePassword.aspx.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePassword.aspx.designer.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Echanneling.Master" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50205</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50205/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

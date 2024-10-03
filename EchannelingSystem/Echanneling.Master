@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Echanneling.master.cs" Inherits="EchannelingSystem.Echanneling" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-timepicker@0.5.2/css/bootstrap-timepicker.min.css" rel="stylesheet">
+    <style>
+        .p-5 {
+            padding: 2rem !important;
+        }
+
+        .my-5 {
+            margin-top: 1rem !important;
+            margin-bottom: 3rem !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand">EChanneling</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <%if (roleId == "1") /*Navbar for Patients*/
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../View/HomeUI.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../View/AppCalendarSearchUI.aspx">Search for Appointments</a>
+                        </li>
+                        <%} %>
+
+                        <%if (roleId == "2") /*Navbar for Consultants*/
+                            { %>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../View/ConsultantHomeUI.aspx">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" id="navbarSearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../View/ConsultantCalendars.aspx">My Calendar</a>
+                                <a class="dropdown-item" href="../View/CalendarUI.aspx">Add Availability</a>
+                            </div>
+                        </li>
+                        <%} %>
+
+                        <% if (roleId == "3") /*Navbar for Admins*/
+                            { %>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../View/AdminHomeUI.aspx">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Admin Forms
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../View/BranchUI.aspx">Branch</a>
+                                <a class="dropdown-item" href="../View/DieaseUI.aspx">Disease</a>
+                                <a class="dropdown-item" href="../View/LabReportsUI.aspx">Lab Reports</a>
+                                <a class="dropdown-item" href="../View/MedicineCategoryUI.aspx">Medicine Category</a>
+                                <a class="dropdown-item" href="../View/MedicineUI.aspx">Medicine</a>
+                                <a class="dropdown-item" href="../View/PaymentCategoryUI.aspx">Payment Category</a>
+                                <a class="dropdown-item" href="../View/QualificationUI.aspx">Qualification</a>
+                                <a class="dropdown-item" href="../View/SpecializationUI.aspx">Specialization</a>
+                                <a class="dropdown-item" href="../View/SymptomUI.aspx">Symptom</a>
+                                <a class="dropdown-item" href="../View/PaymentTypeUI.aspx">Payment Type</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Main Forms
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../View/Consultantui.aspx">Consultant</a>
+                                <a class="dropdown-item" href="../View/PatientUI.aspx">Patient</a>
+                                <a class="dropdown-item" href="../View/AdminUI.aspx">Admin</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Search
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../View/ConsultantSearchUI.aspx">Consultant Search</a>
+                                <a class="dropdown-item" href="../View/PatientSearchUI.aspx">Patient Search</a>
+                            </div>
+                        </li>
+
+                        <%} %>
+                    </ul>
+                    <div class="d-flex"> <%--Common UserProfile Dropdown--%>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+
+                                <asp:HyperLink class="nav-link dropdown-toggle active" ID="hlUserName" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Welcome</asp:HyperLink>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="../View/UpdateProfile.aspx">Update Profile</a>
+                                    <a class="dropdown-item" href="../View/UpdatePassword.aspx">Update Password</a>
+                                    <a class="dropdown-item" href="../View/LogOut.aspx">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="../Scripts/bootstrap_452.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-timepicker@0.5.2/js/bootstrap-timepicker.min.js"></script>
+</body>
+</html>
